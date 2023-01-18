@@ -698,6 +698,21 @@ img {
     font-size: 18px;
     text-align: center;
     width: 218px;
+    position: relative;
+}
+
+.buy-product-hover {
+    position: absolute;
+    width: 100%;
+    height: 180px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    display: none;
 }
 
 .producers-height {
@@ -771,7 +786,7 @@ img {
 }
 
 .shadow:hover {
-    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .product-item-click a:focus {
@@ -1765,12 +1780,24 @@ legend {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 18px;
     background-color: var(--green);
     border: none;
     color: var(--basic-white);
     box-shadow: inset 0px -3px 0px #367315;
     border-radius: 2px;
+    width: 135px;
+    height: 38px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 38px;
+}
+
+.buy svg {
+    opacity: 0.3;
+    margin-right: 9px;
+    margin-top: -2px;
 }
 
 .buy:hover {
@@ -1791,6 +1818,10 @@ legend {
     border-radius: 2px;
     color: var(--light-deep-blue);
     background-color: var(--basic-white);
+    width: 135px;
+    height: 38px;
+    text-transform: uppercase;
+    margin-top: -40px;
 }
 
 .bookmarks:hover {
