@@ -8,7 +8,6 @@
     <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans+Narrow&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -518,26 +517,36 @@
     </div>
     </footer>
 
-    <section class="modal" style="display: none;">
+    <section class="modal modal-letter hidden">
         <div class="modal-overline"></div>
         <form action="https://echo.htmlacademy.ru" method="post">
-            <div>
+            <div class="modal-input-container">
+            <div class="modal-name">
                 <label class="bigger-font" for="name">Ваше имя:</label>
-                <input class="input" id="name" type="text" name="name" placeholder="Имя Фамилия">
+                <input class="modal-input" id="name" type="text" name="name" placeholder="Имя Фамилия">
             </div>
-            <div>
+            <div class="modal-mail">
                 <label class="bigger-font" for="email">Ваш e-mail:</label>
-                <input class="input" id="email" type="email" name="email" placeholder="email@example.com">
+                <input class="modal-input" id="email" type="email" name="email" placeholder="email@example.com">
             </div>
-            <div>
+            <div class="modal-message">
                 <label class="bigger-font" for="letter">Текст письма:</label>
-                <input class="input" id="letter" type="text" name="letter" placeholder="В свободной форме">
+                <input class="modal-input" id="letter" type="text" name="letter" placeholder="В свободной форме">
+            </div>
             </div>
             <div class="lower-border">
             <button class="link-all button button-modal" type="submit">Отправить</button>
             </div>
-            <button class="close button-madal" type="button">Закрыть</button>
+            <button class="close button-modal" type="button" aria-label="Закрыть"></button>
         </form>
     </section>
+
+    <section class="modal modal-map hidden">
+        <h2 class="hidden">Карта проезда</h2>
+        <div class="modal-overline"></div>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651616!2d30.320894615971543!3d59.938794181876204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2s!4v1674071792220!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <button type="button" class="close" aria-label="Закрыть"></button>
+    </section>
+
 </body>
 </html>
