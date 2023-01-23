@@ -183,23 +183,23 @@
                     <legend class="filter-text">Производители:</legend>
                     <ul class="filter-producer">
                         <li class="filter-item filter-checkbox">
-                            <input class="checkbox-input" type="checkbox" name="company-bosch" id="company-bosch" checked>
+                            <input class="checkbox-input visually-hidden" type="checkbox" name="company-bosch" id="company-bosch" checked>
                             <label class="options" for="company-bosch">BOSCH</label>
                         </li>
                         <li class="filter-item filter-checkbox">
-                            <input class="checkbox-input" type="checkbox" name="company-interskol" id="company-interskol">
+                            <input class="checkbox-input visually-hidden" type="checkbox" name="company-interskol" id="company-interskol">
                             <label class="options" for="company-interskol">ИНТЕРСКОЛ</label>
                         </li>
                         <li class="filter-item filter-checkbox">
-                            <input class="checkbox-input" type="checkbox" name="company-makita" id="company-makita" checked>
+                            <input class="checkbox-input visually-hidden" type="checkbox" name="company-makita" id="company-makita" checked>
                             <label class="options" for="company-makita">MAKITA</label>
                         </li>
                         <li class="filter-item filter-checkbox">
-                            <input class="checkbox-input" type="checkbox" name="company-dewalt" id="company-dewalt">
+                            <input class="checkbox-input visually-hidden" type="checkbox" name="company-dewalt" id="company-dewalt">
                             <label class="options" for="company-dewalt">DEWALT</label>
                         </li>
                         <li class="filter-item filter-checkbox">
-                            <input class="checkbox-input" type="checkbox" name="company-hitachi" id="company-hitachi">
+                            <input class="checkbox-input visually-hidden" type="checkbox" name="company-hitachi" id="company-hitachi">
                             <label class="options" for="company-hitachi">HITACHI</label>
                         </li>
                     </ul>
@@ -208,11 +208,11 @@
                     <legend class="filter-text">Питание:</legend>
                     <ul class="filter-power">
                         <li class="filter-item filter-radio">
-                            <input class="radio-input" type="radio" name="power" value="аккумуляторные" id="battery">
+                            <input class="radio-input visually-hidden" type="radio" name="power" value="аккумуляторные" id="battery">
                             <label class="options" for="battery">аккумуляторные</label>
                         </li>
                         <li class="filter-item filter-radio">
-                            <input class="radio-input" type="radio" name="power" value="сетевые" id="main-power">
+                            <input class="radio-input visually-hidden" type="radio" name="power" value="сетевые" id="main-power">
                             <label class="options" for="main-power">Сетевые</label>
                         </li>
                     </ul>
@@ -243,7 +243,7 @@
 
         <div class="perforators">
             <ul class="product-list-catalog">
-                <li class="product-item items-height shadow">
+                <li class="product-item items-height shadow" tab-index="0">
                     <img class="img6000" src="img/6000.jpg" width="144px" height="128px" alt="BOSCH BFG 6000">
                     <h3>Перфоратор BOSCH BFG 6000</h3>
                     <p class="old-price">30500 Р.</p>
@@ -537,5 +537,23 @@
         <a class="link-continue" href="#">Продолжить покупки</a>
         <button class="clsose" type="button">Закрыть</button>
     </div>
+
 </body>
+
+<section class="modal buy-confirmation hidden">
+    <div class="modal-overline"></div>
+    <div class="item-added">
+        <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M33 66C51.2254 66 66 51.2254 66 33C66 14.7746 51.2254 0 33 0C14.7746 0 0 14.7746 0 33C0 51.2254 14.7746 66 33 66Z" fill="#63A63E"/>
+            <path d="M49.641 21.066C49.2498 20.6773 48.6181 20.6773 48.227 21.066L29.788 39.504C29.3968 39.8927 28.7651 39.8927 28.374 39.504L20.234 31.365C19.8428 30.9763 19.2111 30.9763 18.82 31.365L15.285 34.9C14.8962 35.2912 14.8962 35.9228 15.285 36.314L28.374 49.404C28.7651 49.7927 29.3968 49.7927 29.788 49.404L33.324 45.868L34.738 44.454L53.176 26.016C53.5647 25.6248 53.5647 24.9932 53.176 24.602L49.641 21.066Z" fill="white"/>
+        </svg>
+        <p class="item-added-text">Товар добавлен в корзину!</p>
+    </div>
+    <div class="buy-confirmation-lower">
+        <a class="link-all">Оформить заказ</a>
+        <button type="button" class="continue-button">Продолжить покупки</button>
+    </div>
+    <button type="button" class="close" aria-label="Закрыть"></button>
+</section>
+
 </html>

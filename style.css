@@ -22,6 +22,19 @@
 
 /* Global */
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -690,7 +703,8 @@ html {
     margin-top: 0;
 }
 
-.product-item {
+.product-item,
+.producer-item {
     margin: 0;
     border: 1px solid #EAEAEA;
     font-family: 'PT Sans', sans-serif;
@@ -701,18 +715,29 @@ html {
     position: relative;
 }
 
+.product-item:hover img,
+.product-item:focus img{
+    opacity: 0;
+}
+
 .buy-product-hover {
     position: absolute;
     width: 100%;
     height: 180px;
-    background-color: white;
+    background-color: transparent;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     margin: 0;
     padding: 0;
-    display: none;
+    opacity: 0;
+    padding-bottom: 170px;
+}
+
+.buy-product-hover:hover,
+.buy-product-hover:focus{
+    opacity: 1; 
 }
 
 .producers-height {
@@ -891,7 +916,7 @@ html {
     height: 279px;
 }
 
-.advantages-item button{
+.advantages-item {
     font-family: 'Cuprum', sans-serif;
     background-color: var(--light-deep-blue);
     font-size: 21px;
@@ -904,13 +929,29 @@ html {
     height: 61px;
     text-align: start;
     padding-left: 22px;
+    cursor: pointer;
 }
 
-.advantages-item button:hover {
+.advantages-item-active {
+    font-family: 'Cuprum', sans-serif;
+    background-color: var(--basic-white);
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: 700;
+    color: var(--deep-blue);
+    border: none;
+    box-shadow: none;
+    width: 240px;
+    height: 61px;
+    text-align: start;
+    padding-left: 22px;
+}
+
+.advantages-item:hover {
     background-color: var(--deep-blue);
 }
 
-.advantages-item button:focus {
+.advantages-item:focus {
     background-color: var(--basic-white);
     color: var(--deep-blue);
     box-shadow: none;
@@ -1525,6 +1566,7 @@ html {
 .filter-item {
     padding-bottom: 16px;
     position: relative;
+    margin-left: 34px;
 }
 
 .filter-checkbox label{
@@ -1875,10 +1917,9 @@ legend {
     color: var(--filter-gray);
 }
 
- .filter-item input[type="checkbox"],
+.filter-item input[type="checkbox"],
 .filter-item input[type="radio"] {
    margin-right: 15px;
-   visibility: hidden;
 }
 
 .checkbox {
@@ -1904,6 +1945,11 @@ legend {
 
 .checkbox-input:checked +label::before {
     border: 2px solid white;
+}
+
+.checkbox-input:focus + label::before,
+.radio-input:focus + label::before {
+    outline: 2px solid black;
 }
 
 .checkbox-input:checked + label:after {
@@ -2021,6 +2067,7 @@ list-style: none;
     border: 2px solid var(--filter-gray);
     border-radius: 2px;
     background-color: var(--basic-white);
+    text-align: start;
 }
 
 .modal-name .modal-input,
@@ -2032,7 +2079,6 @@ list-style: none;
 .modal-input-container {
     display: flex;
     flex-wrap: wrap;
-
     padding: 38px 80px;
     justify-content: space-between;
 }
@@ -2130,6 +2176,73 @@ list-style: none;
 .map {
     width: 100%;
     height: 442px;
+}
+
+.buy-confirmation {
+    width: 620px;
+    height: 282px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buy-confirmation-lower {
+    width: 620px;
+    height: 112px;
+    background-color: #f1f1f1;
+    align-self: flex-end;
+    margin-bottom: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buy-confirmation-lower a{
+    padding: 10px 46px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+    height: 38px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.buy-confirmation-lower button{
+    padding: 10px 32px;
+    border: none;
+    background-color: var(--basic-white);
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin: 0;
+    height: 38px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.buy-confirmation .close::after,
+.buy-confirmation .close::before {
+    background-color: var(--red);
+}
+
+.item-added {
+    width: 620px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-added-text {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    margin-left: 30px;
 }
 
 /* icons */
@@ -2262,4 +2375,8 @@ list-style: none;
 
 .hidden {
     display: none;
+}
+
+.visible {
+    display: block;
 }

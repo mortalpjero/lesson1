@@ -162,7 +162,7 @@
                 </div>
             </div>
             <ul class="product-list">
-                <li class="product-item items-height shadow">
+                <li class="product-item perforators-display items-height shadow">
                     <div>
                         <img class="img9000" src="img/9000.jpg" width="184px" height="164px" alt="Перфоратор BOSCH BFG 9000">
                     </div>
@@ -183,7 +183,7 @@
                         <button type="button" class="bookmarks">В закладки</button>
                     </div>
                 </li>
-                <li class="product-item items-height shadow new">
+                <li class="product-item perforators-display items-height shadow new">
                     <div>
                         <img class="img3000" src="img/3000.jpg" width="127px" height="112px" alt="Перфоратор BOSCH BFG 3000">
                     </div>
@@ -204,7 +204,7 @@
                         <button type="button" class="bookmarks">В закладки</button>
                     </div>
                 </li>
-                <li class="product-item items-height shadow">
+                <li class="product-item perforators-display items-height shadow">
                     <div>
                         <img class="img6000" src="img/6000.jpg" width="144px" height="128px" alt="Перфоратор BOSCH BFG 6000">
                     </div>
@@ -225,7 +225,7 @@
                         <button type="button" class="bookmarks">В закладки</button>
                     </div>
                 </li>
-                <li class="product-item items-height shadow new">
+                <li class="product-item perforators-display items-height shadow new">
                     <div>
                         <img class="img2000" src="img/2000.jpg" width="127px" height="112px" alt="Перфоратор BOSCH BFG 2000">
                     </div>
@@ -257,42 +257,42 @@
                 </div>
             </div>
             <ul class="product-list">
-                <li class="product-item producers-height product-item-click shadow">
+                <li class="producer-item producers-height product-item-click shadow">
                     <a href="blank.html">
                         <img src="img/bosch.svg" width="126px" height="37px" alt="Логотип фирмы BOSCH">
                     </a>
                 </li>
-                <li class="product-item producers-height product-item-click shadow">
+                <li class="producer-item producers-height product-item-click shadow">
                     <a href="blank.html">
                         <img src="img/Makita.svg" width="123px" height="40px" alt="Логотип фирмы Makita">
                     </a>
                 </li>
-                <li class="product-item producers-height product-item-click shadow">
+                <li class="producer-item producers-height product-item-click shadow">
                     <a href="blank.html">
                         <img src="img/DeWALT.svg" width="146px" height="44px" alt="Логотип фирмы DeWALT">
                     </a>
                 </li>
-                <li class="product-item producers-height product-item-click shadow">
+                <li class="producer-item producers-height product-item-click shadow">
                     <a href="blank.html">
                         <img class="aaa" src="img/inter.svg" width="200px" height="76px" alt="Логотип фирмы Интерскол">
                     </a>
                 </li>
-                <li class="product-item producers-height product-item-click shadow">
+                <li class="producer-item producers-height product-item-click shadow">
                     <a href="blank.html">
                         <img src="img/Hitachi.svg" width="220px" height="145px" alt="Логотип фирмы Hitachi">
                     </a>
                 </li>
-                <li class="product-item producers-height product-item-click shadow">
+                <li class="producer-item producers-height product-item-click shadow">
                     <a href="blank.html">
                         <img src="img/LG.svg" width="121px" height="73px" alt="Логотип фирмы LG">
                     </a>
                 </li>
-                <li class="product-item producers-height product-item-click shadow">
+                <li class="producer-item producers-height product-item-click shadow">
                     <a href="blank.html">
                         <img src="img/AEG.svg" width="151px" height="96px" alt="Логотип фирмы AEG">
                     </a>
                 </li>
-                <li class="product-item producers-height product-item-click shadow">
+                <li class="producer-item producers-height product-item-click shadow">
                     <a href="blank.html">
                         <img src="img/Metabo.svg" width="204px" height="69px" alt="Логотип фирмы Metabo">
                     </a>
@@ -312,14 +312,14 @@
             </div>
 
             <ul class="advantages-list">
-                <li class="advantages-item">
-                    <button type="button">Доставка</button>
+                <li>
+                    <button class="advantages-item" type="button">Доставка</button>
                 </li>
-                <li class="advantages-item">
-                    <button type="button">Гарантия</button>
+                <li>
+                    <button class="advantages-item-active" type="button">Гарантия</button>
                 </li>
-                <li class="advantages-item">
-                    <button type="button">Кредит</button>
+                <li>
+                    <button class="advantages-item" type="button">Кредит</button>
                 </li>
             </ul>
 
@@ -523,15 +523,15 @@
             <div class="modal-input-container">
             <div class="modal-name">
                 <label class="bigger-font" for="name">Ваше имя:</label>
-                <input class="modal-input" id="name" type="text" name="name" placeholder="Имя Фамилия">
+                <input class="modal-input" id="name" type="text" name="name" placeholder="Имя Фамилия" required>
             </div>
             <div class="modal-mail">
                 <label class="bigger-font" for="email">Ваш e-mail:</label>
-                <input class="modal-input" id="email" type="email" name="email" placeholder="email@example.com">
+                <input class="modal-input" id="email" type="email" name="email" placeholder="email@example.com" required>
             </div>
             <div class="modal-message">
                 <label class="bigger-font" for="letter">Текст письма:</label>
-                <input class="modal-input" id="letter" type="text" name="letter" placeholder="В свободной форме">
+                <textarea class="modal-input" id="letter" type="text" name="letter" placeholder="В свободной форме" required></textarea>
             </div>
             </div>
             <div class="lower-border">
@@ -541,12 +541,13 @@
         </form>
     </section>
 
-    <section class="modal modal-map hidden">
+    <section class="modal modal-map hidden modalmap">
         <h2 class="hidden">Карта проезда</h2>
         <div class="modal-overline"></div>
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651616!2d30.320894615971543!3d59.938794181876204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2s!4v1674071792220!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <button type="button" class="close" aria-label="Закрыть"></button>
     </section>
 
+    <script src="/indexmodal.js"></script>
 </body>
 </html>
