@@ -478,6 +478,7 @@ html {
 .gallery {
     background-color: var(--special-yellow);
     position: relative;
+    width: 620px;
 }
 
 .left {
@@ -500,7 +501,7 @@ html {
     background-image: url("img/icons/icon-right.svg");
     position: absolute;
     top: 122px;
-    right: 20px;
+    right: 640px;
     cursor: pointer;
 }
 
@@ -536,8 +537,9 @@ html {
 
 .img-width {
     display: block;
-    width: 620px;
     height: 266px;
+    width: max-content;
+    outline: 2px solid black;
 }
 
 .news-catalog-item a {
@@ -562,6 +564,16 @@ html {
     grid-column: 1 / 3;
     grid-row: 2 / 4;
     position: relative;
+    overflow: hidden;
+}
+
+.movement {
+    transform: translateX(-620px);
+    transition: ease 1s;
+}
+
+.transition {
+    transition: ease 1s;
 }
 
 .catalog-images {
@@ -579,13 +591,19 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    width: 620px;
+    width: 1240px;
     height: 104px;
     z-index: 2;
+    display: flex;
 }
 
 .gallery-heading h3 {
     text-transform: uppercase;
+}
+
+.second-picture,
+.first-picture {
+    width: 620px;
 }
 
 .figure-caption {
@@ -608,6 +626,12 @@ html {
     font-weight: 700;
     font-size: 36px;
     line-height: 36px;
+}
+
+.figure-content {
+    width: 200%;
+    display: flex;
+    overflow: hidden;
 }
 
 .fig-link {

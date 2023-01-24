@@ -9,6 +9,12 @@ const login = modalLetter.querySelector("[name=name]");
 const mail = modalLetter.querySelector("[name=email]")
 const form = modalLetter.querySelector("form");
 
+const figure = document.querySelector(".figure-content")
+const caption = document.querySelector(".gallery-heading")
+const right = document.querySelector(".right")
+const left = document.querySelector(".left")
+const transition = document.querySelector(".transition")
+
 map.addEventListener("click", function(evt){
     evt.preventDefault();
     modalmap.classList.add("visible");
@@ -27,3 +33,17 @@ lost.addEventListener("click", function(fn){
 hideLetter.addEventListener("click", function(){
     modalLetter.classList.remove("visible");
 });
+
+right.addEventListener("click", function(){
+    figure.classList.add("movement");
+    caption.classList.add("movement");
+    figure.classList.remove("transition");
+    caption.classList.remove("transition");
+})
+
+left.addEventListener("click", function(){
+    figure.classList.remove("movement");
+    caption.classList.remove("movement");
+    figure.classList.add("transition");
+    caption.classList.add("transition");
+})
